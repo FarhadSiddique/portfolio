@@ -7,7 +7,7 @@ tagline: "Mobile and web app for course-based group communication at UofT, built
 stack: ["React Native", "TypeScript", "Expo", "Node.js", "SQL", "Docker", "SCSS"]
 category: mobile-app
 started: 2021-01
-last_updated: 2021-10-01
+last_updated: 2026-03-09
 repo: https://github.com/SSH-Company/CourseGroupChat
 live_url: null
 video_url: "https://player.vimeo.com/video/600088555?h=739d86b355"

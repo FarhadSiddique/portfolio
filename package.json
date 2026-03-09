@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "agents:review": "tsx agents/review-agent.ts",
+    "agents:sync": "tsx agents/sync-agent.ts",
     "agents:content-review": "tsx agents/content-review-agent.ts",
     "agents:update": "tsx agents/update-agent.ts",
     "agents:update:dry-run": "tsx agents/update-agent.ts --dry-run"
