@@ -123,6 +123,8 @@ async function checkProjectContent(project: {
 
 The project file has been modified recently but the \`last_updated\` date is stale.
 
+CRITICAL: Only use facts explicitly stated in the project file below. Do not invent metrics, numbers, or technical details not present in the source material.
+
 Project file (projects/${project.file}):
 ---
 ${matter.stringify(project.content, project.data)}
@@ -131,7 +133,7 @@ ${matter.stringify(project.content, project.data)}
 Current skills in content/skills.ts:
 ${skillsSnapshot}
 
-Based on any new content in the project file, suggest 1-2 specific, concrete improvements. Each suggestion must be directly applicable to a file. Do not suggest vague improvements.
+Based on any new content in the project file, suggest 1-2 specific, concrete improvements using only facts present in the file above. Each suggestion must be directly applicable to a file. Do not suggest vague improvements and do not fabricate any data.
 
 Format your response as a markdown body with these sections only:
 ## Proposed Changes

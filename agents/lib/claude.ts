@@ -1,4 +1,5 @@
-import "dotenv/config";
+import { config } from "dotenv";
+config({ path: ".env.local" });
 
 const API_KEY = process.env.ANTHROPIC_API_KEY;
 
