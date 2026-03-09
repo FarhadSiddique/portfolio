@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# proposals (keep .gitkeep, ignore actual proposal files)
+proposals/*.md
+proposals/applied/*.md
