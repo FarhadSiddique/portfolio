@@ -13,6 +13,11 @@ export const metadata: Metadata = {
     template: `%s | ${resume.name}`,
   },
   description: resume.summary,
+  metadataBase: new URL("https://farhadsiddique.com"),
+  openGraph: {
+    siteName: resume.name,
+    url: "https://farhadsiddique.com",
+  },
 };
 
 export default function RootLayout({

@@ -5,7 +5,8 @@ export const resume = {
   email: "farhad2548@gmail.com",
   phone: "(289) 707-6100",
   linkedin: "https://linkedin.com/in/farhad-siddique/",
-  github: "https://github.com/farhadsiddique", // update with real URL
+  github: "https://github.com/FarhadSiddique",
+  website: "https://farhadsiddique.com",
   summary:
     "Product Manager with 3+ years driving payments modernization, digital growth, and platform strategy at Capital One. Background in economics, statistics, and computer science with hands-on experience building and shipping software — from co-founding a mobile startup to developing personal projects with React Native and TypeScript.",
 };
