@@ -1,6 +1,6 @@
 export const resume = {
   name: "Farhad Siddique",
-  title: "Senior Product Manager",
+  title: "Product Manager",
   location: "Toronto, ON",
   email: "farhad2548@gmail.com",
   phone: "(289) 707-6100",
