@@ -4,7 +4,7 @@ import { workHistory } from "@/content/work-history";
 import { skills } from "@/content/skills";
 
 const stats = [
-  { value: "3+", label: "Years at Capital One" },
+  { value: "5", label: "Years of PM experience" },
   { value: "$2.1M+", label: "Cost savings delivered" },
   { value: "50+", label: "User research studies" },
   { value: "4", label: "Products launched" },
