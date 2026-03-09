@@ -20,7 +20,7 @@ BudgetSync is a mobile app for tracking monthly expenses and pushing categorized
 
 ## Why I built it
 
-I was frustrated with budgeting apps that lock your financial data inside their ecosystem. I wanted full control — raw data in a spreadsheet I already use, with automation on top of it rather than instead of it.
+I was frustrated with budgeting apps that lock your financial data inside their ecosystem. I wanted full control: raw data in a spreadsheet I already use, with automation on top of it rather than instead of it.
 
 ## Technical challenges
 

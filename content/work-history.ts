@@ -22,10 +22,10 @@ export const workHistory: Job[] = [
         period: "Jan 2024 – Present",
         bullets: [
           "Ideated, developed and delivered innovative Payment Plans to support customers going through financial difficulties.",
-          "Led integration of new payment infrastructure enabling real-time payment processing (Interac RTP) — expected +2% customer spend.",
+          "Led integration of new payment infrastructure enabling real-time payment processing (Interac RTP), with expected +2% customer spend.",
           "Launched mobile Payment Plan and Proactive Marketing → +37% reach, +20% enrollments.",
           "Built in-house SMS system and optimized contact funnel → $400K savings, +22% reach.",
-          "Leading enterprise platform modernization — defining future capabilities of specialized segregated platforms to replace legacy mainframe systems.",
+          "Leading enterprise platform modernization, defining future capabilities of specialized segregated platforms to replace legacy mainframe systems.",
         ],
       },
       {
@@ -35,7 +35,7 @@ export const workHistory: Job[] = [
           "Managed the customer segmentation system for Canada's Customer Resiliency team, driving strategies on customer interaction models.",
           "Redesigned segmentation logic enabling vendor optimization → $1.7M savings.",
           "Built and managed digital communications portfolio (Email, SMS, Push) → +21% penetration, +4% payments.",
-          "Managed US/Canada-wide vendor outage recovery — scoped, contained, and remediated high-severity incidents.",
+          "Managed US/Canada-wide vendor outage recovery: scoped, contained, and remediated high-severity incidents.",
           "Upheld regulatory risk standards for segmentation systems, ensuring Satisfactory Audit 2023.",
         ],
       },

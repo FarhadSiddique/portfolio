@@ -3,7 +3,7 @@ id: cirkle
 title: "Cirkle"
 status: archived
 visibility: public
-tagline: "Messaging platform for post-secondary students — verified course group chats, peer course reviews, and mentorship connections."
+tagline: "Messaging platform for post-secondary students: verified course group chats, peer course reviews, and mentorship connections."
 stack: ["React JS", "AWS", "Node.js"]
 category: mobile-app
 started: 2021-01
@@ -19,9 +19,9 @@ highlight_order: 2
 
 Cirkle is a messaging app built specifically for post-secondary students at the University of Toronto. It solves three problems that every student hits:
 
-1. **Getting into course group chats** — students struggle to get added to class chats, especially in large enrolment courses. Cirkle provided verified, pre-made chat groups for every course.
-2. **Choosing courses** — detailed peer course evaluations helped students make informed decisions at registration time.
-3. **Finding mentorship** — the app connected students with others who had already completed the courses they were considering.
+1. **Getting into course group chats:** students struggle to get added to class chats, especially in large enrolment courses. Cirkle provided verified, pre-made chat groups for every course.
+2. **Choosing courses:** detailed peer course evaluations helped students make informed decisions at registration time.
+3. **Finding mentorship:** the app connected students with others who had already completed the courses they were considering.
 
 ## Why I built it
 

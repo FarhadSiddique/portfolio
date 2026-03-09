@@ -9,7 +9,7 @@ const geist = Geist({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: `${resume.name} — ${resume.title}`,
+    default: `${resume.name} | ${resume.title}`,
     template: `%s | ${resume.name}`,
   },
   description: resume.summary,

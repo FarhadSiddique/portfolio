@@ -64,7 +64,7 @@ export default function ProjectsPage() {
     <div className="max-w-5xl mx-auto px-6 py-16">
       <h1 className="text-4xl font-bold text-slate-900 mb-3">Projects</h1>
       <p className="text-slate-500 mb-12 max-w-xl">
-        Side projects and startups — built to sharpen technical skills and explore product ideas.
+        Side projects and startups, built to sharpen technical skills and explore product ideas.
       </p>
 
       <div className="grid sm:grid-cols-2 gap-6">
