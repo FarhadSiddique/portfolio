@@ -5,6 +5,7 @@ export const skills: Record<string, string[]> = {
     "User Research",
     "Roadmapping",
     "Stakeholder Management",
+    "Technical Product Management",
     "AI Prompt Engineering",
     "Storytelling & Presentations",
   ],
@@ -18,6 +19,7 @@ export const skills: Record<string, string[]> = {
     "React Native",
     "AWS",
     "Expo",
+    "Cloud Migration",
   ],
   "Tools": [
     "Jira",
@@ -28,6 +30,7 @@ export const skills: Record<string, string[]> = {
   "Certifications": [
     "Lean Six Sigma Green Belt",
     "Lean Six Sigma Yellow Belt",
+    "Process Management Foundational Training",
     "Critical Business Processes Manager",
   ],
 };

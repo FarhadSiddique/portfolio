@@ -6,8 +6,8 @@ import { skills } from "@/content/skills";
 const stats = [
   { value: "5", label: "Years of PM experience" },
   { value: "$2.1M+", label: "Cost savings delivered" },
-  { value: "50+", label: "User research studies" },
-  { value: "4", label: "Products launched" },
+  { value: "200+", label: "User research studies" },
+  { value: "2", label: "Startups co-founded" },
 ];
 
 export default function Home() {

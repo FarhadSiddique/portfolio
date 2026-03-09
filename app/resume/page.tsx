@@ -128,6 +128,37 @@ export default function ResumePage() {
         ))}
       </section>
 
+      {/* Awards */}
+      <section className="mb-12">
+        <h2 className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-6">Honors & Awards</h2>
+        <div className="space-y-4">
+          {resume.awards.map((award) => (
+            <div key={award.title} className="flex gap-4">
+              <div className="flex-shrink-0 w-12 text-xs text-slate-400 pt-0.5">{award.year}</div>
+              <div>
+                <p className="font-medium text-slate-900 text-sm">{award.title}</p>
+                <p className="text-xs text-slate-500">{award.issuer}</p>
+                {"description" in award && (
+                  <p className="text-xs text-slate-500 mt-0.5">{award.description}</p>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Languages */}
+      <section>
+        <h2 className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">Languages</h2>
+        <div className="flex gap-2">
+          {resume.languages.map((lang) => (
+            <span key={lang} className="text-xs px-3 py-1 bg-slate-100 text-slate-700 rounded-full">
+              {lang}
+            </span>
+          ))}
+        </div>
+      </section>
+
     </div>
   );
 }
