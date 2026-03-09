@@ -10,6 +10,7 @@ started: 2021-01
 last_updated: 2021-10-01
 repo: null
 live_url: null
+video_url: "https://player.vimeo.com/video/600088555?h=739d86b355"
 featured: true
 highlight_order: 2
 ---

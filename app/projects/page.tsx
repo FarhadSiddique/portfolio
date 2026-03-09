@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import Link from "next/link";
 
 export const metadata: Metadata = { title: "Projects" };
 
@@ -68,8 +69,9 @@ export default function ProjectsPage() {
 
       <div className="grid sm:grid-cols-2 gap-6">
         {projects.map((p) => (
-          <div
+          <Link
             key={p.id}
+            href={`/projects/${p.id}`}
             className="border border-slate-200 rounded-2xl p-6 hover:border-slate-400 transition-colors flex flex-col"
           >
             <div className="flex items-center gap-2 mb-3">
@@ -90,31 +92,10 @@ export default function ProjectsPage() {
               ))}
             </div>
 
-            {(p.repo || p.live_url) && (
-              <div className="flex gap-3 pt-4 border-t border-slate-100">
-                {p.repo && (
-                  <a
-                    href={p.repo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs font-medium text-slate-600 hover:text-slate-900 transition-colors"
-                  >
-                    GitHub →
-                  </a>
-                )}
-                {p.live_url && (
-                  <a
-                    href={p.live_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs font-medium text-blue-600 hover:text-blue-800 transition-colors"
-                  >
-                    Live →
-                  </a>
-                )}
-              </div>
-            )}
-          </div>
+            <div className="pt-4 border-t border-slate-100 mt-auto">
+              <span className="text-xs font-medium text-blue-600">View project →</span>
+            </div>
+          </Link>
         ))}
       </div>
     </div>

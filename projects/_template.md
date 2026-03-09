@@ -10,6 +10,7 @@ started: YYYY-MM
 last_updated: YYYY-MM-DD
 repo: null
 live_url: null
+video_url: null
 featured: false
 highlight_order: null
 ---
