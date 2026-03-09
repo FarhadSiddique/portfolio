@@ -17,7 +17,7 @@ function getFeaturedProjects() {
 
 const stats = [
   { value: "5", label: "Years of PM experience" },
-  { value: "4", label: "Years in fintech" },
+  { value: "4", label: "Years in banking & fintech" },
   { value: "2", label: "Startups co-founded" },
 ];
 
