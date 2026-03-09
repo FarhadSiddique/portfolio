@@ -48,7 +48,7 @@ export default function Home() {
           </Link>
           <Link
             href="/projects"
-            className="px-6 py-3 border border-slate-300 text-slate-700 font-medium rounded-full hover:border-slate-500 transition-colors"
+            className="px-6 py-3 bg-blue-600 text-white font-medium rounded-full hover:bg-blue-700 transition-colors"
           >
             See Projects
           </Link>
@@ -56,7 +56,8 @@ export default function Home() {
             href={resume.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-3 border border-slate-300 text-slate-700 font-medium rounded-full hover:border-slate-500 transition-colors"
+            className="px-6 py-3 text-white font-medium rounded-full transition-colors"
+            style={{ backgroundColor: "#0A66C2" }}
           >
             LinkedIn
           </a>
@@ -64,7 +65,8 @@ export default function Home() {
             href={resume.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-3 border border-slate-300 text-slate-700 font-medium rounded-full hover:border-slate-500 transition-colors"
+            className="px-6 py-3 text-white font-medium rounded-full transition-colors"
+            style={{ backgroundColor: "#24292f" }}
           >
             GitHub
           </a>
