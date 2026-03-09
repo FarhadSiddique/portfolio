@@ -32,10 +32,10 @@ export const workHistory: Job[] = [
         title: "Associate – Customer Decisioning & Digital Channels",
         period: "May 2022 – Dec 2023",
         bullets: [
-          "Managed customer segmentation system for Canada's Customer Resiliency team, driving customer interaction strategies.",
+          "Owned customer segmentation system for Canada's Customer Resiliency team, driving customer interaction strategies.",
           "Redesigned segmentation logic enabling vendor optimization → $1.7M savings.",
-          "Built and managed digital communications portfolio (Email, SMS, Push) → +21% penetration, +4% payments.",
-          "Managed US/Canada-wide vendor outage recovery: scoped, contained, and remediated high-severity incidents.",
+          "Launched and scaled digital communications portfolio (Email, SMS, Push) → +21% penetration, +4% payments.",
+          "Led US/Canada-wide vendor outage recovery: scoped, contained, and remediated high-severity incidents.",
           "Upheld regulatory risk standards for segmentation systems, ensuring Satisfactory Audit 2023.",
         ],
       },
