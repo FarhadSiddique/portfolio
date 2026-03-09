@@ -104,7 +104,9 @@ When reviewing:
 - Check that the writing is confident and results-focused
 - Flag anything that undersells achievements that ARE documented in the source material
 - Suggest stronger phrasing where wording is weak or vague, using only known facts
-- Check for consistency between sections
+- CROSS-PAGE CONSISTENCY: verify that every fact (job titles, dates, company names, metrics, skills, project descriptions, tech stack) is stated consistently across the home page, resume page, projects page, and all project detail pages. Flag any contradictions or discrepancies between pages.
+- Check that skills listed in content/skills.ts match what appears in work history and project files
+- Check that project taglines on the projects page match the detail page content
 - Identify anything missing that would strengthen the site
 - Consider both technical and non-technical viewers
 
