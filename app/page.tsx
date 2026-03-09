@@ -17,6 +17,7 @@ function getFeaturedProjects() {
 
 const stats = [
   { value: "5", label: "Years of PM experience" },
+  { value: "4", label: "Years in fintech" },
   { value: "2", label: "Startups co-founded" },
 ];
 
@@ -71,7 +72,7 @@ export default function Home() {
 
       {/* Stats */}
       <section className="py-12 border-y border-slate-100">
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-3 gap-8">
           {stats.map((s) => (
             <div key={s.label}>
               <p className="text-3xl font-bold text-slate-900">{s.value}</p>
