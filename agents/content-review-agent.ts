@@ -109,6 +109,7 @@ When reviewing:
 - Check that project taglines on the projects page match the detail page content
 - Identify anything missing that would strengthen the site
 - Consider both technical and non-technical viewers
+- RENDERING CHECK: scan all markdown content in project files for formatting that may not render correctly on the website — specifically: bold text using **text** should be used sparingly and correctly, inline code using `code` should only wrap actual code/technical terms, numbered and bulleted lists should use consistent formatting, and no raw markdown syntax (**, *, #, `) should appear as literal characters in the rendered output
 
 Be specific. Every suggestion must include exact before/after wording or a concrete action.
 Do not suggest design changes that require new UI components — only content and copy changes.`;

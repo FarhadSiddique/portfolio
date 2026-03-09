@@ -60,6 +60,19 @@ function renderContent(content: string) {
   });
 }
 
+function renderInline(text: string): React.ReactNode {
+  const parts = text.split(/(\*\*.*?\*\*|`.*?`)/g);
+  return parts.map((part, i) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return <strong key={i} className="font-semibold text-slate-800">{part.slice(2, -2)}</strong>;
+    }
+    if (part.startsWith("`") && part.endsWith("`")) {
+      return <code key={i} className="text-xs bg-slate-100 px-1 py-0.5 rounded font-mono">{part.slice(1, -1)}</code>;
+    }
+    return part;
+  });
+}
+
 export default async function ProjectPage({ params }: Props) {
   const { slug } = await params;
   const project = getProject(slug);
@@ -129,7 +142,7 @@ export default async function ProjectPage({ params }: Props) {
                     <ol key={i} className="list-decimal list-inside space-y-1.5">
                       {items.map((item, j) => (
                         <li key={j} className="text-slate-600 text-sm">
-                          {item.replace(/^\d+\.\s*/, "").replace(/\*\*(.*?)\*\*/g, "$1")}
+                          {renderInline(item.replace(/^\d+\.\s*/, ""))}
                         </li>
                       ))}
                     </ol>
@@ -141,13 +154,13 @@ export default async function ProjectPage({ params }: Props) {
                     <ul key={i} className="list-disc list-inside space-y-1.5">
                       {items.map((item, j) => (
                         <li key={j} className="text-slate-600 text-sm">
-                          {item.replace(/^-\s*/, "")}
+                          {renderInline(item.replace(/^-\s*/, ""))}
                         </li>
                       ))}
                     </ul>
                   );
                 }
-                return <p key={i} className="text-sm">{para}</p>;
+                return <p key={i} className="text-sm">{renderInline(para)}</p>;
               })}
             </div>
           </section>
