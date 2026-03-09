@@ -8,7 +8,7 @@ stack: ["React Native", "TypeScript", "Expo", "Expo Router", "Google Sheets API"
 category: mobile-app
 started: 2025-01
 last_updated: 2026-03-09
-repo: null
+repo: https://github.com/FarhadSiddique/budgetsync
 live_url: null
 video_url: null
 featured: true
