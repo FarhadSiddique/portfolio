@@ -32,9 +32,6 @@ export default function Home() {
 
       {/* Hero */}
       <section className="pt-20 pb-16">
-        <p className="text-blue-600 font-medium text-sm mb-3 tracking-wide uppercase">
-          Open to new opportunities
-        </p>
         <h1 className="text-5xl font-bold text-slate-900 tracking-tight mb-4">
           {resume.name}
         </h1>
