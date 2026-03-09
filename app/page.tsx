@@ -17,8 +17,6 @@ function getFeaturedProjects() {
 
 const stats = [
   { value: "5", label: "Years of PM experience" },
-  { value: "$2.1M+", label: "Cost savings delivered" },
-  { value: "200+", label: "User research studies" },
   { value: "2", label: "Startups co-founded" },
 ];
 
@@ -53,17 +51,27 @@ export default function Home() {
             See Projects
           </Link>
           <a
-            href={`mailto:${resume.email}`}
+            href={resume.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-6 py-3 border border-slate-300 text-slate-700 font-medium rounded-full hover:border-slate-500 transition-colors"
           >
-            Get in Touch
+            LinkedIn
+          </a>
+          <a
+            href={resume.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 border border-slate-300 text-slate-700 font-medium rounded-full hover:border-slate-500 transition-colors"
+          >
+            GitHub
           </a>
         </div>
       </section>
 
       {/* Stats */}
       <section className="py-12 border-y border-slate-100">
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 gap-8">
           {stats.map((s) => (
             <div key={s.label}>
               <p className="text-3xl font-bold text-slate-900">{s.value}</p>
