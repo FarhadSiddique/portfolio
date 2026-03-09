@@ -1,7 +1,19 @@
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
 import Link from "next/link";
 import { resume } from "@/content/resume";
 import { workHistory } from "@/content/work-history";
 import { skills } from "@/content/skills";
+
+function getFeaturedProjects() {
+  const dir = path.join(process.cwd(), "projects");
+  const files = fs.readdirSync(dir).filter((f) => f.endsWith(".md") && !f.startsWith("_"));
+  return files
+    .map((f) => matter(fs.readFileSync(path.join(dir, f), "utf-8")).data)
+    .filter((p) => p.visibility !== "private" && p.featured)
+    .sort((a, b) => (a.highlight_order ?? 99) - (b.highlight_order ?? 99));
+}
 
 const stats = [
   { value: "5", label: "Years of PM experience" },
@@ -13,6 +25,7 @@ const stats = [
 export default function Home() {
   const currentJob = workHistory[0];
   const currentRole = currentJob.roles[0];
+  const featuredProjects = getFeaturedProjects();
 
   return (
     <div className="max-w-5xl mx-auto px-6">
@@ -127,31 +140,23 @@ export default function Home() {
           </Link>
         </div>
         <div className="grid sm:grid-cols-2 gap-4">
-          <div className="p-6 border border-slate-200 rounded-xl hover:border-slate-400 transition-colors">
-            <div className="flex items-center gap-2 mb-2">
-              <span className="w-2 h-2 rounded-full bg-green-500" />
-              <span className="text-xs text-slate-400 uppercase tracking-wide font-medium">Active</span>
+          {featuredProjects.map((p) => (
+            <div key={p.id} className="p-6 border border-slate-200 rounded-xl hover:border-slate-400 transition-colors">
+              <div className="flex items-center gap-2 mb-2">
+                <span className={`w-2 h-2 rounded-full ${p.status === "active" ? "bg-green-500" : "bg-slate-300"}`} />
+                <span className="text-xs text-slate-400 uppercase tracking-wide font-medium capitalize">{p.status}</span>
+              </div>
+              <h3 className="font-semibold text-slate-900 mb-1">{p.title}</h3>
+              <p className="text-sm text-slate-500">{p.tagline}</p>
+              <div className="flex flex-wrap gap-1.5 mt-3">
+                {p.stack.slice(0, 3).map((t: string) => (
+                  <span key={t} className="text-xs px-2 py-1 bg-slate-100 text-slate-600 rounded">
+                    {t}
+                  </span>
+                ))}
+              </div>
             </div>
-            <h3 className="font-semibold text-slate-900 mb-1">BudgetSync</h3>
-            <p className="text-sm text-slate-500">
-              Mobile budget tracker with Google Sheets sync and multi-provider AI categorization.
-            </p>
-            <div className="flex flex-wrap gap-1.5 mt-3">
-              {["React Native", "TypeScript", "Expo"].map((t) => (
-                <span key={t} className="text-xs px-2 py-1 bg-slate-100 text-slate-600 rounded">
-                  {t}
-                </span>
-              ))}
-            </div>
-          </div>
-          <div className="p-6 border border-dashed border-slate-200 rounded-xl flex items-center justify-center">
-            <p className="text-sm text-slate-400 text-center">
-              More projects coming soon.{" "}
-              <Link href="/projects" className="text-blue-500 hover:underline">
-                See all →
-              </Link>
-            </p>
-          </div>
+          ))}
         </div>
       </section>
 
