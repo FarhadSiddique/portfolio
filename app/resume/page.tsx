@@ -89,7 +89,7 @@ export default function ResumePage() {
       </section>
 
       {/* Education */}
-      <section>
+      <section className="mb-12">
         <h2 className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-6">Education</h2>
         {education.map((edu) => (
           <div key={edu.school}>

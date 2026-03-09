@@ -110,6 +110,8 @@ When reviewing:
 - Identify anything missing that would strengthen the site
 - Consider both technical and non-technical viewers
 - RENDERING CHECK: scan all markdown content in project files for formatting that may not render correctly on the website — specifically: bold text using **text** should be used sparingly and correctly, inline code using `code` should only wrap actual code/technical terms, numbered and bulleted lists should use consistent formatting, and no raw markdown syntax (**, *, #, `) should appear as literal characters in the rendered output
+- DATES & YEARS: verify all award years, job dates, and project dates are accurate and consistent across content files — flag any that appear incorrect or inconsistent with the surrounding context
+- SPACING & LAYOUT ISSUES: flag any sections in content files where dense blocks of text, missing line breaks, or inconsistent formatting could cause visual crowding or poor readability on the rendered page
 
 Be specific. Every suggestion must include exact before/after wording or a concrete action.
 Do not suggest design changes that require new UI components — only content and copy changes.`;

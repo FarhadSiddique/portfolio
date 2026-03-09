@@ -15,7 +15,7 @@ export const resume = {
       title: "Canada Beacon Award",
       issuer: "Capital One Canada",
       description: "Capital One Canada's highest level of achievement, awarded for exceptional impact with the Customer Resiliency team.",
-      year: "2024",
+      year: "2026",
     },
     {
       title: "University of Toronto Student Leadership Award",
