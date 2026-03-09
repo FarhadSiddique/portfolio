@@ -8,7 +8,7 @@ stack: ["React Native", "TypeScript", "Expo", "Node.js", "SQL", "Docker", "SCSS"
 category: mobile-app
 started: 2021-01
 last_updated: 2026-03-09
-repo: https://github.com/SSH-Company/CourseGroupChat
+repo: https://github.com/FarhadSiddique/Cirkle
 live_url: null
 video_url: "https://player.vimeo.com/video/600088555?h=739d86b355"
 featured: true
