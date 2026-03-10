@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     default: `${resume.name} | ${resume.title}`,
     template: `%s | ${resume.name}`,
   },
-  description: resume.summary,
+  description: resume.summary[0],
   metadataBase: new URL("https://farhadsiddique.com"),
   openGraph: {
     siteName: resume.name,
