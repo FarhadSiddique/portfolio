@@ -42,13 +42,13 @@ export default function Home() {
         <div className="flex flex-wrap gap-3">
           <Link
             href="/resume"
-            className="px-6 py-3 bg-slate-900 text-white font-medium rounded-full hover:bg-slate-700 transition-colors"
+            className="px-6 py-3 bg-white text-slate-900 font-medium rounded-full border border-slate-200 hover:bg-slate-50 transition-colors"
           >
             View Resume
           </Link>
           <Link
             href="/projects"
-            className="px-6 py-3 bg-blue-600 text-white font-medium rounded-full hover:bg-blue-700 transition-colors"
+            className="px-6 py-3 bg-white text-slate-900 font-medium rounded-full border border-slate-200 hover:bg-slate-50 transition-colors"
           >
             See Projects
           </Link>
