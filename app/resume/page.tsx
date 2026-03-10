@@ -33,7 +33,11 @@ export default function ResumePage() {
       {/* Summary */}
       <section className="mb-12">
         <h2 className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">Summary</h2>
-        <p className="text-slate-600 leading-relaxed">{resume.summary}</p>
+        <div className="space-y-3">
+          {resume.summary.map((para, i) => (
+            <p key={i} className="text-slate-600 leading-relaxed">{para}</p>
+          ))}
+        </div>
       </section>
 
       {/* Work Experience */}

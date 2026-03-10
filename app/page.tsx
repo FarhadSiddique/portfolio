@@ -36,9 +36,11 @@ export default function Home() {
           {resume.name}
         </h1>
         <p className="text-2xl text-slate-500 font-light mb-6">{resume.title}</p>
-        <p className="text-lg text-slate-600 max-w-2xl leading-relaxed mb-8">
-          {resume.summary}
-        </p>
+        <div className="text-lg text-slate-600 max-w-2xl leading-relaxed mb-8 space-y-4">
+          {resume.summary.map((para, i) => (
+            <p key={i}>{para}</p>
+          ))}
+        </div>
         <div className="flex flex-wrap gap-3">
           <Link
             href="/resume"

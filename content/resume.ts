@@ -7,8 +7,11 @@ export const resume = {
   linkedin: "https://linkedin.com/in/farhad-siddique/",
   github: "https://github.com/FarhadSiddique",
   website: "https://farhadsiddique.com",
-  summary:
-    "Product Manager with 5 years of experience in financial systems, payments infrastructure, and digital platforms. At Capital One, I lead data-driven strategies across real-time payment integration, cloud migration, customer segmentation, and communication platforms, delivering measurable cost savings and stronger customer engagement. I bridge business strategy with technical execution, and build side projects with React Native and TypeScript to stay close to the craft.",
+  summary: [
+    "I'm a Product Manager at Capital One, where I've spent 4 years driving strategy across payments, credit decisioning, and customer engagement — from redesigning segmentation approaches that unlocked $1.7M in savings to defining the roadmap for real-time payment integration and enterprise platform modernization.",
+    "My work has delivered over $2M in cost savings, a 37% increase in customer reach, and a 20% lift in payment plan enrollments. In 2026, I received the Canada Beacon Award — Capital One Canada's highest recognition.",
+    "I'm an early and active adopter of AI — I take ideas from brainstorm to roadmap to working prototype, and I'm comfortable building multi-agent AI workflows to turn concepts into products. Before Capital One, I co-founded two startups. Currently building BudgetSync, a mobile app that uses AI to categorize transactions, identify spending patterns, predict expenses, and automate budgeting.",
+  ],
   languages: ["English (Native)", "Bengali (Native)"],
   awards: [
     {
