@@ -6,6 +6,7 @@ import { resume } from "@/content/resume";
 import { workHistory } from "@/content/work-history";
 import { skills } from "@/content/skills";
 
+
 function getFeaturedProjects() {
   const dir = path.join(process.cwd(), "projects");
   const files = fs.readdirSync(dir).filter((f) => f.endsWith(".md") && !f.startsWith("_"));
@@ -134,6 +135,29 @@ export default function Home() {
                     {skill}
                   </span>
                 ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Awards */}
+      <section className="py-16 border-t border-slate-100">
+        <h2 className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-6">
+          Awards
+        </h2>
+        <div className="space-y-4">
+          {resume.awards.map((award) => (
+            <div key={award.title} className="flex items-start gap-4">
+              <div className="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span className="text-amber-600 text-sm">★</span>
+              </div>
+              <div>
+                <p className="font-semibold text-slate-900">{award.title}</p>
+                <p className="text-sm text-slate-500">{award.issuer} · {award.year}</p>
+                {award.description && (
+                  <p className="text-sm text-slate-400 mt-1">{award.description}</p>
+                )}
               </div>
             </div>
           ))}
