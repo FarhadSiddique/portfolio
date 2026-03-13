@@ -34,11 +34,19 @@ function getProjects(): Project[] {
     return { ...data, content } as Project;
   });
 
+  const statusOrder: Record<string, number> = {
+    active: 0,
+    stealth: 1,
+    paused: 2,
+    complete: 3,
+    archived: 4,
+  };
+
   return projects
     .filter((p) => p.visibility !== "private")
     .sort((a, b) => {
-      if (a.featured && !b.featured) return -1;
-      if (!a.featured && b.featured) return 1;
+      const statusDiff = (statusOrder[a.status] ?? 99) - (statusOrder[b.status] ?? 99);
+      if (statusDiff !== 0) return statusDiff;
       if (a.highlight_order != null && b.highlight_order != null)
         return a.highlight_order - b.highlight_order;
       return 0;
