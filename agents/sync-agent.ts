@@ -7,6 +7,9 @@
  * 2. Missing skills — if stack items are absent from skills.ts, propose adding them
  * 3. Stale content — if a project file was edited after last_updated, propose content review
  *
+ * Also scans the parent projects folder (C:/Users/farha/projects) for untracked
+ * external projects and proposes adding them to portfolio/projects/.
+ *
  * Run: npm run agents:sync
  */
 
@@ -21,7 +24,11 @@ import { resume } from "../content/resume.ts";
 import { workHistory } from "../content/work-history.ts";
 
 const PROJECTS_DIR = path.join(process.cwd(), "projects");
+const EXTERNAL_PROJECTS_DIR = path.join(process.cwd(), "..");
 const NEW_PROJECT_THRESHOLD_DAYS = 30;
+
+// Folders in the parent directory to never suggest as portfolio projects
+const EXTERNAL_IGNORE = new Set(["portfolio", "billi-bot", "node_modules", ".git"]);
 
 type ProjectFrontmatter = {
   id: string;
@@ -289,13 +296,131 @@ Change \`status: pending\` to \`status: approved\`, then run:
 }
 
 // ----------------------------------------------------------------
+// External projects scan — suggest additions from parent folder
+// ----------------------------------------------------------------
+
+function getExistingProjectIds(): Set<string> {
+  return new Set(
+    fs
+      .readdirSync(PROJECTS_DIR)
+      .filter((f) => f.endsWith(".md") && !f.startsWith("_"))
+      .map((f) => f.replace(".md", "").toLowerCase())
+  );
+}
+
+function gatherProjectContext(dirPath: string): string {
+  const snippets: string[] = [];
+
+  const filesToRead = [
+    "README.md", "readme.md",
+    "CLAUDE.md",
+    "package.json",
+    "plan.md",
+  ];
+
+  for (const file of filesToRead) {
+    const full = path.join(dirPath, file);
+    if (fs.existsSync(full)) {
+      const content = fs.readFileSync(full, "utf-8").slice(0, 2000);
+      snippets.push(`### ${file}\n${content}`);
+    }
+  }
+
+  return snippets.length > 0 ? snippets.join("\n\n") : "No readable files found.";
+}
+
+async function checkExternalProjects() {
+  const existing = getExistingProjectIds();
+  const template = readFileContent("projects/_template.md");
+
+  const dirs = fs
+    .readdirSync(EXTERNAL_PROJECTS_DIR, { withFileTypes: true })
+    .filter((d) => d.isDirectory() && !EXTERNAL_IGNORE.has(d.name) && !d.name.startsWith("."));
+
+  for (const dir of dirs) {
+    const slug = dir.name.toLowerCase().replace(/\s+/g, "-");
+
+    if (existing.has(slug)) {
+      console.log(`  External: ${dir.name} — already in portfolio, skipping`);
+      continue;
+    }
+
+    if (proposalAlreadyExists("sync-agent", `external-${slug}`)) {
+      console.log(`  External: ${dir.name} — proposal already exists, skipping`);
+      continue;
+    }
+
+    console.log(`  External: ${dir.name} — not in portfolio, generating proposal...`);
+
+    const context = gatherProjectContext(path.join(EXTERNAL_PROJECTS_DIR, dir.name));
+    const currentSkills = JSON.stringify(skills, null, 2);
+    const featuredProjects = getAllProjects().filter((p) => p.data.featured);
+
+    const body = await askClaude(
+      "You are a portfolio assistant for a Product Manager. Generate a project markdown file proposal based on available context. Be accurate and concise. Do not invent details.",
+      `A new project folder "${dir.name}" was found at C:/Users/farha/projects/${dir.name} that is not yet in the portfolio.
+
+AVAILABLE PROJECT CONTEXT:
+${context}
+
+PORTFOLIO PROJECT TEMPLATE:
+${template}
+
+CURRENT SKILLS (content/skills.ts):
+${currentSkills}
+
+CURRENTLY FEATURED PROJECTS:
+${featuredProjects.map((p) => `- ${p.data.title} (highlight_order: ${p.data.highlight_order ?? "none"})`).join("\n")}
+
+Based on the context above:
+1. Generate a complete \`projects/${slug}.md\` file using the template format. Fill in all fields accurately using only information present in the context. Set \`visibility: public\` unless the project seems private/internal.
+2. Should it be featured on the homepage? Suggest a \`featured\` value and \`highlight_order\` if yes.
+3. Are there skills in its stack missing from content/skills.ts that should be added?
+
+Format your response as:
+
+## Proposed Changes
+
+### New file: projects/${slug}.md
+\`\`\`
+[complete file content]
+\`\`\`
+
+### Skills to add to content/skills.ts (if any)
+[list or "None"]
+
+### Featured on homepage?
+[Yes/No and reasoning]
+
+## Rationale
+[Why this project is worth adding to the portfolio]
+
+## How to Approve
+Change \`status: pending\` to \`status: approved\`, then run:
+    npm run agents:update`
+    );
+
+    writeProposal({
+      agent: "sync-agent",
+      confidence: "medium",
+      affects: [`projects/${slug}.md`, "content/skills.ts"],
+      source_project: `external-${slug}`,
+      summary: `Add external project "${dir.name}" to portfolio`,
+      body,
+    });
+  }
+}
+
+// ----------------------------------------------------------------
 // Main
 // ----------------------------------------------------------------
 
 async function main() {
   console.log("Sync Agent running...\n");
+
+  // Check existing portfolio projects
   const projects = getAllProjects();
-  console.log(`Found ${projects.length} project(s)\n`);
+  console.log(`Found ${projects.length} portfolio project(s)\n`);
 
   for (const project of projects) {
     console.log(`Checking: ${project.data.title}`);
@@ -303,6 +428,10 @@ async function main() {
     await checkMissingSkills(project);
     await checkStaleContent(project);
   }
+
+  // Check external projects folder for untracked projects
+  console.log("\nScanning external projects folder...");
+  await checkExternalProjects();
 
   console.log("\nDone. Check proposals/ for new proposals.");
 }
