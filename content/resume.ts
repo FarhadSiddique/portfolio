@@ -1,6 +1,6 @@
 export const resume = {
   name: "Farhad Siddique",
-  title: "Senior Associate – Payment Plans & Payment Infrastructure",
+  title: "Senior Associate – Mobile Adoption & Engagement",
   location: "Toronto, ON",
   email: "farhad2548@gmail.com",
   phone: "(289) 707-6100",
@@ -8,9 +8,9 @@ export const resume = {
   github: "https://github.com/FarhadSiddique",
   website: "https://farhadsiddique.com",
   summary: [
-    "I'm a Product Manager at Capital One, where I've spent 4 years driving strategy across payments, credit decisioning, and customer engagement. From redesigning segmentation approaches that delivered $1.7M in cost savings to defining the roadmap for real-time payment integration and enterprise platform modernization.",
-    "My work has delivered over $2M in cost savings, a 37% increase in customer reach, and a 20% lift in payment plan enrollments. In 2026, I received the Canada Beacon Award, Capital One Canada's highest recognition.",
-    "I'm an early and active adopter of AI. I take ideas from brainstorm to roadmap to working prototype, and I'm comfortable building multi-agent AI workflows to turn concepts into products. Before Capital One, I co-founded two startups. Currently building BudgetSync, a mobile app that uses AI to categorize transactions, identify spending patterns, predict expenses, and automate budgeting.",
+    "Product Manager with 5 years of experience across financial systems, payments, customer engagement and bootstrapping. Currently working at Capital One, leading data driven strategies to reduce credit loss and creating solutions that help Canadians every day.",
+    "I take ideas from brainstorm to roadmap to working prototype, and I'm comfortable building multi-agent AI workflows to turn concepts into real products. Vibe coding my left field ideas into existence is basically a second job at this point. Before Capital One, I co-founded two startups. Currently building BudgetSync and quietly working on something new — check the projects page if you're curious.",
+    "I'm equally at home digging into the numbers and shaping strategy as I am getting into the weeds with engineering. Fluent in both spreadsheet and pull request. See what I've been building →",
   ],
   languages: ["English (Native)", "Bengali (Native)"],
   awards: [
