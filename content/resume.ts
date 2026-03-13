@@ -10,7 +10,7 @@ export const resume = {
   summary: [
     "Product Manager with 5 years of experience across financial systems, payments, customer engagement and bootstrapping. Currently working at Capital One, leading data driven strategies to reduce credit loss and creating solutions that help Canadians every day.",
     "I take ideas from brainstorm to roadmap to working prototype, and I'm comfortable building multi-agent AI workflows to turn concepts into real products. Vibe coding my left field ideas into existence is basically a second job at this point. Before Capital One, I co-founded two startups. Currently building BudgetSync and quietly working on something new — check the projects page if you're curious.",
-    "I'm equally at home digging into the numbers and shaping strategy as I am getting into the weeds with engineering. Fluent in both spreadsheet and pull request. See what I've been building →",
+    "I'm equally at home digging into the numbers and shaping strategy as I am getting into the weeds with engineering. Fluent in both spreadsheet and pull request.",
   ],
   languages: ["English (Native)", "Bengali (Native)"],
   awards: [
