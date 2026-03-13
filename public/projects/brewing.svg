@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <filter id="lodef">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix type="saturate" values="0" in="noise" result="grayNoise"/>
+      <feBlend in="SourceGraphic" in2="grayNoise" mode="multiply" result="blend"/>
+      <feGaussianBlur stdDeviation="1.8" in="blend" result="blur"/>
+      <feComponentTransfer in="blur">
+        <feFuncR type="linear" slope="0.85" intercept="0.08"/>
+        <feFuncG type="linear" slope="0.8" intercept="0.06"/>
+        <feFuncB type="linear" slope="0.75" intercept="0.04"/>
+      </feComponentTransfer>
+    </filter>
+    <radialGradient id="steam1" cx="50%" cy="100%" r="50%">
+      <stop offset="0%" stop-color="#e8d5b0" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#e8d5b0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="mugBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d4a96a"/>
+      <stop offset="50%" stop-color="#c8922a"/>
+      <stop offset="100%" stop-color="#a0721a"/>
+    </linearGradient>
+    <linearGradient id="coffee" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3d1f00"/>
+      <stop offset="100%" stop-color="#1a0d00"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fdf6ec"/>
+      <stop offset="100%" stop-color="#f5e8d0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bgGrad)"/>
+
+  <g filter="url(#lodef)">
+    <!-- Steam wisps -->
+    <path d="M165 115 Q160 95 168 80 Q175 65 168 50" stroke="#b0b0b0" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <path d="M185 120 Q178 98 186 82 Q193 66 185 48" stroke="#b0b0b0" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.4"/>
+    <path d="M205 115 Q200 94 207 79 Q215 63 207 46" stroke="#b0b0b0" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.45"/>
+    <path d="M225 118 Q220 97 228 82 Q235 67 227 50" stroke="#b0b0b0" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.35"/>
+
+    <!-- Mug body -->
+    <path d="M130 135 L140 240 Q195 255 260 240 L270 135 Z" fill="url(#mugBody)"/>
+
+    <!-- Coffee surface -->
+    <ellipse cx="200" cy="138" rx="70" ry="14" fill="url(#coffee)"/>
+    <!-- Coffee sheen -->
+    <ellipse cx="185" cy="134" rx="25" ry="5" fill="#6b3a1a" opacity="0.4"/>
+
+    <!-- Mug rim -->
+    <ellipse cx="200" cy="135" rx="70" ry="14" fill="none" stroke="#a0721a" stroke-width="4"/>
+
+    <!-- Mug highlight -->
+    <path d="M142 155 Q138 190 140 215" stroke="#e8c878" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.5"/>
+
+    <!-- Handle -->
+    <path d="M262 160 Q305 160 305 190 Q305 220 262 220" stroke="#a0721a" stroke-width="14" fill="none" stroke-linecap="round"/>
+    <path d="M262 160 Q298 160 298 190 Q298 220 262 220" stroke="#d4a96a" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.6"/>
+
+    <!-- Saucer -->
+    <ellipse cx="200" cy="248" rx="95" ry="14" fill="#c8922a" opacity="0.6"/>
+    <ellipse cx="200" cy="246" rx="90" ry="11" fill="#d4a96a" opacity="0.5"/>
+  </g>
+</svg>
