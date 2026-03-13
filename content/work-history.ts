@@ -26,7 +26,7 @@ export const workHistory: Job[] = [
         ],
       },
       {
-        title: "Senior Product Manager",
+        title: "Senior Associate – Payment Plans & Payment Infrastructure",
         period: "Jan 2024 – Feb 2026",
         bullets: [
           "Delivered innovative Payment Plans to support customers experiencing financial difficulties.",
