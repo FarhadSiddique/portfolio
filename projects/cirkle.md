@@ -7,7 +7,7 @@ tagline: "Mobile and web app for course-based group communication at UofT, built
 stack: ["React Native", "TypeScript", "Expo", "Node.js", "SQL", "Docker", "SCSS"]
 category: mobile-app
 started: 2021-01
-last_updated: 2026-03-09
+last_updated: 2024-12-19
 repo: https://github.com/FarhadSiddique/Cirkle
 live_url: null
 video_url: "https://player.vimeo.com/video/600088555?h=739d86b355"
@@ -25,7 +25,7 @@ Cirkle is a mobile and web application built for post-secondary students at the 
 
 ## Why I built it
 
-After researching root causes of student dropout in higher education, my co-founders and I kept hearing the same thing: students felt disconnected and unsupported, especially in large first and second year courses. 
+After conducting market research on root causes of student dropout in higher education, my co-founders and I identified a consistent pain point through user research: students felt disconnected and unsupported, especially in large first and second year courses. 
 
 Existing tools (Facebook groups, iMessage, Discord) were fragmented and unofficial. Cirkle gave students one verified, structured place to connect around their coursework.
 
