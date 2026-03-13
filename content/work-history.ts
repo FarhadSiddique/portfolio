@@ -18,14 +18,24 @@ export const workHistory: Job[] = [
     location: "Toronto, ON · Hybrid",
     roles: [
       {
+        title: "Senior Associate – Mobile Adoption & Engagement",
+        period: "Feb 2026 – Present",
+        bullets: [
+          "Leading development of in-app feedback loop to capture real-time customer insights and inform product decisions.",
+          "Owning MAU growth strategy, identifying and executing engagement opportunities to drive mobile adoption across the customer base.",
+        ],
+      },
+      {
         title: "Senior Associate – Payment Plans & Payment Infrastructure",
-        period: "Jan 2024 – Present",
+        period: "Jan 2024 – Feb 2026",
         bullets: [
           "Delivered innovative Payment Plans to support customers experiencing financial difficulties.",
           "Led integration of new payment infrastructure enabling real-time payment processing (Interac RTP), with expected +2% customer spend.",
           "Launched mobile Payment Plan and Proactive Marketing → +37% reach, +20% enrollments.",
           "Built in-house SMS system and optimized contact funnel → $400K savings, +22% reach.",
+          "Identified opportunities to integrate Automatic Payments with Payment Plans, leading to reduced credit losses.",
           "Lead enterprise platform modernization, defining capabilities for specialized segregated platforms replacing legacy mainframe systems.",
+          "Launched AI QA agent workflow to validate new intent impacts by screening customer calls, cutting traditional QA validation time by 90%+.",
         ],
       },
       {

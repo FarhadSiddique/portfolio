@@ -32,25 +32,25 @@ export default function Home() {
 
       {/* Hero */}
       <section className="pt-20 pb-16">
-        <h1 className="text-5xl font-bold text-slate-900 tracking-tight mb-4">
+        <h1 className="text-3xl sm:text-5xl font-bold text-slate-900 tracking-tight mb-4">
           {resume.name}
         </h1>
-        <p className="text-2xl text-slate-500 font-light mb-6">{resume.title}</p>
+        <p className="text-xl sm:text-2xl text-slate-500 font-light mb-6">{resume.title}</p>
         <div className="text-lg text-slate-600 max-w-2xl leading-relaxed mb-8 space-y-4">
           {resume.summary.map((para, i) => (
             <p key={i}>{para}</p>
           ))}
         </div>
-        <div className="flex flex-wrap gap-3">
+        <div className="grid grid-cols-2 gap-3 sm:flex sm:flex-wrap">
           <Link
             href="/resume"
-            className="px-6 py-3 bg-white text-slate-900 font-medium rounded-full border border-slate-200 hover:bg-slate-50 transition-colors"
+            className="px-6 py-3 bg-white text-slate-900 font-medium rounded-full border border-slate-200 hover:bg-slate-50 transition-colors text-center"
           >
             View Resume
           </Link>
           <Link
             href="/projects"
-            className="px-6 py-3 bg-white text-slate-900 font-medium rounded-full border border-slate-200 hover:bg-slate-50 transition-colors"
+            className="px-6 py-3 bg-white text-slate-900 font-medium rounded-full border border-slate-200 hover:bg-slate-50 transition-colors text-center"
           >
             See Projects
           </Link>
@@ -58,7 +58,7 @@ export default function Home() {
             href={resume.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-3 text-white font-medium rounded-full transition-colors"
+            className="px-6 py-3 text-white font-medium rounded-full transition-colors text-center"
             style={{ backgroundColor: "#0A66C2" }}
           >
             LinkedIn
@@ -67,7 +67,7 @@ export default function Home() {
             href={resume.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-3 text-white font-medium rounded-full transition-colors"
+            className="px-6 py-3 text-white font-medium rounded-full transition-colors text-center"
             style={{ backgroundColor: "#24292f" }}
           >
             GitHub
