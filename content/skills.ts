@@ -34,6 +34,7 @@ export const skills: Record<string, string[]> = {
     "OpenAI API",
     "Gemini API",
     "Cloud Migration",
+    "Telegram Bot API",
   ],
   "Tools": [
     "Jira",
