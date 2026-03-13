@@ -19,16 +19,16 @@ export const metadata: Metadata = {
     url: "https://farhadsiddique.com",
     images: [
       {
-        url: "/og.png",
-        width: 600,
-        height: 600,
+        url: "/og.jpg",
+        width: 960,
+        height: 960,
         alt: `${resume.name} - ${resume.title}`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["/og.png"],
+    images: ["/og.jpg"],
   },
 };
 
