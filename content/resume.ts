@@ -1,6 +1,6 @@
 export const resume = {
   name: "Farhad Siddique",
-  title: "Product Manager",
+  title: "Senior Associate – Payment Plans & Payment Infrastructure",
   location: "Toronto, ON",
   email: "farhad2548@gmail.com",
   phone: "(289) 707-6100",
