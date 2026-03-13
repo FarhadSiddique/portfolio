@@ -36,21 +36,21 @@ export default function Home() {
           {resume.name}
         </h1>
         <p className="text-xl sm:text-2xl text-slate-500 font-light mb-6">{resume.title}</p>
-        <div className="text-lg text-slate-600 max-w-2xl leading-relaxed mb-8 space-y-4">
+        <div className="text-base text-slate-600 max-w-2xl leading-relaxed mb-8 space-y-4">
           {resume.summary.map((para, i) => (
             <p key={i}>{para}</p>
           ))}
         </div>
-        <div className="grid grid-cols-2 gap-3 sm:flex sm:flex-wrap">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           <Link
             href="/resume"
-            className="px-6 py-3 bg-white text-slate-900 font-medium rounded-full border border-slate-200 hover:bg-slate-50 transition-colors text-center"
+            className="px-6 py-3 bg-white text-slate-900 font-medium rounded-full border border-slate-400 hover:bg-slate-50 transition-colors text-center"
           >
             View Resume
           </Link>
           <Link
             href="/projects"
-            className="px-6 py-3 bg-white text-slate-900 font-medium rounded-full border border-slate-200 hover:bg-slate-50 transition-colors text-center"
+            className="px-6 py-3 bg-white text-slate-900 font-medium rounded-full border border-slate-400 hover:bg-slate-50 transition-colors text-center"
           >
             See Projects
           </Link>
