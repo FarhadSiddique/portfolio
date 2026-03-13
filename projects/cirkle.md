@@ -25,7 +25,9 @@ Cirkle is a mobile and web application built for post-secondary students at the 
 
 ## Why I built it
 
-After researching root causes of student dropout in higher education, my co-founders and I kept hearing the same thing: students felt disconnected and unsupported, especially in large first and second year courses. Existing tools (Facebook groups, iMessage, Discord) were fragmented and unofficial. Cirkle gave students one verified, structured place to connect around their coursework.
+After researching root causes of student dropout in higher education, my co-founders and I kept hearing the same thing: students felt disconnected and unsupported, especially in large first and second year courses. 
+
+Existing tools (Facebook groups, iMessage, Discord) were fragmented and unofficial. Cirkle gave students one verified, structured place to connect around their coursework.
 
 ## Technical challenges
 

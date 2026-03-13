@@ -21,8 +21,8 @@ export const workHistory: Job[] = [
         title: "Senior Associate – Mobile Adoption & Engagement",
         period: "Feb 2026 – Present",
         bullets: [
-          "Leading development of in-app feedback loop to capture real-time customer insights and inform product decisions.",
-          "Owning MAU growth strategy, identifying and executing engagement opportunities to drive mobile adoption across the customer base.",
+          "Building in-app feedback loop to capture real-time customer insights and inform product decisions.",
+          "Driving MAU growth strategy, identifying and executing engagement opportunities across the customer base.",
         ],
       },
       {
@@ -35,7 +35,7 @@ export const workHistory: Job[] = [
           "Built in-house SMS system and optimized contact funnel → $400K savings, +22% reach.",
           "Identified opportunities to integrate Automatic Payments with Payment Plans, leading to reduced credit losses.",
           "Lead enterprise platform modernization, defining capabilities for specialized segregated platforms replacing legacy mainframe systems.",
-          "Launched AI QA agent workflow to validate new intent impacts by screening customer calls, cutting traditional QA validation time by 90%+.",
+          "Launched AI QA agent workflow to validate new intent impacts by screening customer calls, reducing traditional QA validation time by over 90%.",
         ],
       },
       {
@@ -43,7 +43,7 @@ export const workHistory: Job[] = [
         period: "May 2022 – Dec 2023",
         bullets: [
           "Owned customer segmentation system for Canada's Customer Resiliency team, driving customer interaction strategies.",
-          "Redesigned segmentation logic enabling vendor optimization → $1.7M savings.",
+          "Redesigned segmentation logic for vendor optimization, delivering $1.7M in cost savings.",
           "Launched and scaled digital communications portfolio (Email, SMS, Push) → +21% penetration, +4% payments.",
           "Led US/Canada-wide vendor outage recovery: scoped, contained, and remediated high-severity incidents.",
           "Upheld regulatory risk standards for segmentation systems, ensuring Satisfactory Audit 2023.",
