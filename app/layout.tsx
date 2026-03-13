@@ -17,6 +17,18 @@ export const metadata: Metadata = {
   openGraph: {
     siteName: resume.name,
     url: "https://farhadsiddique.com",
+    images: [
+      {
+        url: "/og.png",
+        width: 600,
+        height: 600,
+        alt: `${resume.name} - ${resume.title}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/og.png"],
   },
 };
 
