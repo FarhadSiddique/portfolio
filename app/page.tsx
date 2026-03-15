@@ -17,11 +17,11 @@ function getFeaturedProjects() {
 }
 
 const stats = [
-  { value: "5+", label: "Years of PM experience" },
-  { value: "$4M+", label: "Total impact" },
-  { value: "+20%", label: "Avg. customer engagement" },
-  { value: "4", label: "Years in banking & fintech" },
-  { value: "2", label: "Startups co-founded" },
+  { value: "5+", line1: "Years of PM", line2: "Experience" },
+  { value: "$4M+", line1: "Total", line2: "Impact" },
+  { value: "+20%", line1: "Avg. Customer", line2: "Engagement" },
+  { value: "4", line1: "Years in", line2: "Banking & Fintech" },
+  { value: "2", line1: "Startups", line2: "Co-founded" },
 ];
 
 export default function Home() {
@@ -84,7 +84,7 @@ export default function Home() {
           {stats.map((s) => (
             <div key={s.label}>
               <p className="text-3xl font-bold text-slate-900">{s.value}</p>
-              <p className="text-sm text-slate-500 mt-1">{s.label}</p>
+              <p className="text-sm text-slate-500 mt-1 leading-tight">{s.line1}<br />{s.line2}</p>
             </div>
           ))}
         </div>
