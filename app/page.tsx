@@ -82,7 +82,7 @@ export default function Home() {
         {/* Desktop: all 5 in a row */}
         <div className="hidden sm:grid sm:grid-cols-5 gap-8">
           {stats.map((s) => (
-            <div key={s.label}>
+            <div key={s.value}>
               <p className="text-3xl font-bold text-slate-900">{s.value}</p>
               <p className="text-sm text-slate-500 mt-1 leading-tight">{s.line1}<br />{s.line2}</p>
             </div>
@@ -92,7 +92,7 @@ export default function Home() {
         <div className="sm:hidden">
           <div className="grid grid-cols-3 gap-8 mb-8">
             {stats.slice(0, 3).map((s) => (
-              <div key={s.label}>
+              <div key={s.value}>
                 <p className="text-3xl font-bold text-slate-900">{s.value}</p>
                 <p className="text-sm text-slate-500 mt-1">{s.label}</p>
               </div>
@@ -100,7 +100,7 @@ export default function Home() {
           </div>
           <div className="flex justify-center gap-16">
             {stats.slice(3).map((s) => (
-              <div key={s.label}>
+              <div key={s.value}>
                 <p className="text-3xl font-bold text-slate-900">{s.value}</p>
                 <p className="text-sm text-slate-500 mt-1">{s.label}</p>
               </div>
