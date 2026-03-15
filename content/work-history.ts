@@ -33,7 +33,7 @@ export const workHistory: Job[] = [
           "Led integration of new payment infrastructure enabling real-time payment processing (Interac RTP), with expected +2% customer spend.",
           "Launched mobile Payment Plan and Proactive Marketing → +37% reach, +20% enrollments.",
           "Built in-house SMS system and optimized contact funnel → $400K savings, +22% reach.",
-          "Identified opportunities to integrate Automatic Payments with Payment Plans, leading to reduced credit losses.",
+          "Identified opportunities to integrate PAD Automatic Payments with Payment Plans, expected to reduce credit losses by $2M across the portfolio.",
           "Lead enterprise platform modernization, defining capabilities for specialized segregated platforms replacing legacy mainframe systems.",
           "Launched AI QA agent workflow to validate new intent impacts by screening customer calls, reducing traditional QA validation time by over 90%.",
         ],
