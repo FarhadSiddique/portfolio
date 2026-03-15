@@ -17,10 +17,10 @@ function getFeaturedProjects() {
 }
 
 const stats = [
-  { value: "5", label: "Years of PM experience" },
+  { value: "5+", label: "Years of PM experience" },
   { value: "4", label: "Years in banking & fintech" },
-  { value: "$2M+", label: "Revenue generated" },
-  { value: "2", label: "Startups co-founded" },
+  { value: "$4M+", label: "Total impact" },
+  { value: "+20%", label: "Avg. customer engagement" },
 ];
 
 export default function Home() {
