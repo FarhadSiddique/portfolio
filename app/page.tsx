@@ -94,7 +94,7 @@ export default function Home() {
             {stats.slice(0, 3).map((s) => (
               <div key={s.value}>
                 <p className="text-3xl font-bold text-slate-900">{s.value}</p>
-                <p className="text-sm text-slate-500 mt-1">{s.label}</p>
+                <p className="text-sm text-slate-500 mt-1 leading-tight">{s.line1}<br />{s.line2}</p>
               </div>
             ))}
           </div>
@@ -102,7 +102,7 @@ export default function Home() {
             {stats.slice(3).map((s) => (
               <div key={s.value}>
                 <p className="text-3xl font-bold text-slate-900">{s.value}</p>
-                <p className="text-sm text-slate-500 mt-1">{s.label}</p>
+                <p className="text-sm text-slate-500 mt-1 leading-tight">{s.line1}<br />{s.line2}</p>
               </div>
             ))}
           </div>
