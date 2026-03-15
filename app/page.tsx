@@ -18,9 +18,9 @@ function getFeaturedProjects() {
 
 const stats = [
   { value: "5+", label: "Years of PM experience" },
-  { value: "4", label: "Years in banking & fintech" },
   { value: "$4M+", label: "Total impact" },
   { value: "+20%", label: "Avg. customer engagement" },
+  { value: "4", label: "Years in banking & fintech" },
   { value: "2", label: "Startups co-founded" },
 ];
 
@@ -79,13 +79,33 @@ export default function Home() {
 
       {/* Stats */}
       <section className="py-12 border-y border-slate-100">
-        <div className="grid grid-cols-3 sm:grid-cols-5 gap-8">
+        {/* Desktop: all 5 in a row */}
+        <div className="hidden sm:grid sm:grid-cols-5 gap-8">
           {stats.map((s) => (
             <div key={s.label}>
               <p className="text-3xl font-bold text-slate-900">{s.value}</p>
               <p className="text-sm text-slate-500 mt-1">{s.label}</p>
             </div>
           ))}
+        </div>
+        {/* Mobile: 3 on top, 2 centered below */}
+        <div className="sm:hidden">
+          <div className="grid grid-cols-3 gap-8 mb-8">
+            {stats.slice(0, 3).map((s) => (
+              <div key={s.label}>
+                <p className="text-3xl font-bold text-slate-900">{s.value}</p>
+                <p className="text-sm text-slate-500 mt-1">{s.label}</p>
+              </div>
+            ))}
+          </div>
+          <div className="flex justify-center gap-16">
+            {stats.slice(3).map((s) => (
+              <div key={s.label}>
+                <p className="text-3xl font-bold text-slate-900">{s.value}</p>
+                <p className="text-sm text-slate-500 mt-1">{s.label}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
